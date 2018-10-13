@@ -19,7 +19,7 @@ namespace real_estate
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // đây là đâu
         }
     }
 }
