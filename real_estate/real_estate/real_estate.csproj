@@ -54,6 +54,60 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user control\Bill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user control\Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user control\Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user control\Marketing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\Marketing.Designer.cs">
+      <DependentUpon>Marketing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user control\Products.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user control\Projects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\Projects.Designer.cs">
+      <DependentUpon>Projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user control\ProjectType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\ProjectType.Designer.cs">
+      <DependentUpon>ProjectType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user control\RealEstate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\RealEstate.Designer.cs">
+      <DependentUpon>RealEstate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user control\RealEstateType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\RealEstateType.Designer.cs">
+      <DependentUpon>RealEstateType.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +120,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="user control\ProjectType.resx">
+      <DependentUpon>ProjectType.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
