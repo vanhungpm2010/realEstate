@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIOITINH = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Tuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,26 +44,12 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MANV,
             this.TENNV,
-            this.GIOITINH});
+            this.GIOITINH,
+            this.Tuoi});
             this.dataGridView1.Location = new System.Drawing.Point(32, 53);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(343, 150);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // MANV
-            // 
-            this.MANV.HeaderText = "Mã NV";
-            this.MANV.Name = "MANV";
-            // 
-            // TENNV
-            // 
-            this.TENNV.HeaderText = "Tên NV";
-            this.TENNV.Name = "TENNV";
-            // 
-            // GIOITINH
-            // 
-            this.GIOITINH.HeaderText = "Giới tính";
-            this.GIOITINH.Name = "GIOITINH";
             // 
             // button1
             // 
@@ -72,11 +60,43 @@
             this.button1.Text = "Show all";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // MANV
+            // 
+            this.MANV.HeaderText = "Mã NV";
+            this.MANV.Name = "MANV";
+            this.MANV.Width = 50;
+            // 
+            // TENNV
+            // 
+            this.TENNV.HeaderText = "Tên NV";
+            this.TENNV.Name = "TENNV";
+            // 
+            // GIOITINH
+            // 
+            this.GIOITINH.HeaderText = "Giới tính";
+            this.GIOITINH.Name = "GIOITINH";
+            this.GIOITINH.Width = 50;
+            // 
+            // Tuoi
+            // 
+            this.Tuoi.HeaderText = "Tuổi";
+            this.Tuoi.Name = "Tuoi";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(201, 224);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Add new";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 353);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -88,10 +108,12 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MANV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENNV;
         private System.Windows.Forms.DataGridViewComboBoxColumn GIOITINH;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tuoi;
+        private System.Windows.Forms.Button button2;
     }
 }
 
