@@ -30,25 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRS));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnSale = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnProject = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnBill = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnProduct = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCustomer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEmp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tbExit = new System.Windows.Forms.Label();
             this.employee2 = new real_estate.user_control.Employee();
             this.customer3 = new real_estate.user_control.Customer();
             this.projects1 = new real_estate.user_control.Projects();
             this.products1 = new real_estate.user_control.Products();
             this.customer2 = new real_estate.user_control.Customer();
             this.bill1 = new real_estate.user_control.Bill();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tbExit = new System.Windows.Forms.Label();
             this.employee1 = new real_estate.user_control.Employee();
             this.customer1 = new real_estate.user_control.Customer();
-            this.btnSale = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -58,7 +57,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.SeaGreen;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btnSale);
             this.panel2.Controls.Add(this.btnProject);
             this.panel2.Controls.Add(this.btnBill);
@@ -71,13 +69,59 @@
             this.panel2.Size = new System.Drawing.Size(206, 590);
             this.panel2.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(58, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 25);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Real Estate";
+            // 
+            // btnSale
+            // 
+            this.btnSale.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSale.BorderRadius = 0;
+            this.btnSale.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnSale.ButtonText = "Sales";
+            this.btnSale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSale.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSale.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSale.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSale.Iconimage")));
+            this.btnSale.Iconimage_right = null;
+            this.btnSale.Iconimage_right_Selected = null;
+            this.btnSale.Iconimage_Selected = null;
+            this.btnSale.IconMarginLeft = 0;
+            this.btnSale.IconMarginRight = 0;
+            this.btnSale.IconRightVisible = true;
+            this.btnSale.IconRightZoom = 0D;
+            this.btnSale.IconVisible = true;
+            this.btnSale.IconZoom = 60D;
+            this.btnSale.IsTab = false;
+            this.btnSale.Location = new System.Drawing.Point(-3, 444);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSale.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnSale.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSale.selected = false;
+            this.btnSale.Size = new System.Drawing.Size(206, 48);
+            this.btnSale.TabIndex = 6;
+            this.btnSale.Text = "Sales";
+            this.btnSale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSale.Textcolor = System.Drawing.Color.White;
+            this.btnSale.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // btnProject
             // 
             this.btnProject.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnProject.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnProject.BorderRadius = 0;
-            this.btnProject.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnProject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnProject.ButtonText = "Projects";
             this.btnProject.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProject.DisabledColor = System.Drawing.Color.Gray;
@@ -93,13 +137,13 @@
             this.btnProject.IconVisible = true;
             this.btnProject.IconZoom = 60D;
             this.btnProject.IsTab = false;
-            this.btnProject.Location = new System.Drawing.Point(0, 395);
+            this.btnProject.Location = new System.Drawing.Point(-3, 387);
             this.btnProject.Name = "btnProject";
             this.btnProject.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnProject.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnProject.OnHoverTextColor = System.Drawing.Color.White;
             this.btnProject.selected = false;
-            this.btnProject.Size = new System.Drawing.Size(206, 48);
+            this.btnProject.Size = new System.Drawing.Size(209, 59);
             this.btnProject.TabIndex = 5;
             this.btnProject.Text = "Projects";
             this.btnProject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,7 +157,7 @@
             this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnBill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBill.BorderRadius = 0;
-            this.btnBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnBill.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnBill.ButtonText = "Bills";
             this.btnBill.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBill.DisabledColor = System.Drawing.Color.Gray;
@@ -129,13 +173,13 @@
             this.btnBill.IconVisible = true;
             this.btnBill.IconZoom = 60D;
             this.btnBill.IsTab = false;
-            this.btnBill.Location = new System.Drawing.Point(0, 334);
+            this.btnBill.Location = new System.Drawing.Point(-3, 331);
             this.btnBill.Name = "btnBill";
             this.btnBill.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnBill.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnBill.OnHoverTextColor = System.Drawing.Color.White;
             this.btnBill.selected = false;
-            this.btnBill.Size = new System.Drawing.Size(206, 48);
+            this.btnBill.Size = new System.Drawing.Size(209, 59);
             this.btnBill.TabIndex = 4;
             this.btnBill.Text = "Bills";
             this.btnBill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,7 +193,7 @@
             this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnProduct.BorderRadius = 0;
-            this.btnProduct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnProduct.ButtonText = "Products";
             this.btnProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProduct.DisabledColor = System.Drawing.Color.Gray;
@@ -166,13 +210,13 @@
             this.btnProduct.IconVisible = true;
             this.btnProduct.IconZoom = 60D;
             this.btnProduct.IsTab = false;
-            this.btnProduct.Location = new System.Drawing.Point(0, 276);
+            this.btnProduct.Location = new System.Drawing.Point(-3, 276);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnProduct.OnHoverTextColor = System.Drawing.Color.White;
             this.btnProduct.selected = false;
-            this.btnProduct.Size = new System.Drawing.Size(206, 48);
+            this.btnProduct.Size = new System.Drawing.Size(209, 57);
             this.btnProduct.TabIndex = 3;
             this.btnProduct.Text = "Products";
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,7 +230,7 @@
             this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCustomer.BorderRadius = 0;
-            this.btnCustomer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnCustomer.ButtonText = "Customers";
             this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCustomer.DisabledColor = System.Drawing.Color.Gray;
@@ -202,13 +246,13 @@
             this.btnCustomer.IconVisible = true;
             this.btnCustomer.IconZoom = 60D;
             this.btnCustomer.IsTab = false;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 219);
+            this.btnCustomer.Location = new System.Drawing.Point(-3, 219);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnCustomer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnCustomer.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCustomer.selected = false;
-            this.btnCustomer.Size = new System.Drawing.Size(206, 48);
+            this.btnCustomer.Size = new System.Drawing.Size(209, 58);
             this.btnCustomer.TabIndex = 2;
             this.btnCustomer.Text = "Customers";
             this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,7 +266,7 @@
             this.btnEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEmp.BorderRadius = 0;
-            this.btnEmp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnEmp.ButtonText = "Employees";
             this.btnEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEmp.DisabledColor = System.Drawing.Color.Gray;
@@ -238,13 +282,13 @@
             this.btnEmp.IconVisible = true;
             this.btnEmp.IconZoom = 60D;
             this.btnEmp.IsTab = false;
-            this.btnEmp.Location = new System.Drawing.Point(0, 166);
+            this.btnEmp.Location = new System.Drawing.Point(-3, 166);
             this.btnEmp.Name = "btnEmp";
             this.btnEmp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnEmp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnEmp.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmp.selected = false;
-            this.btnEmp.Size = new System.Drawing.Size(206, 48);
+            this.btnEmp.Size = new System.Drawing.Size(209, 56);
             this.btnEmp.TabIndex = 1;
             this.btnEmp.Text = "Employees";
             this.btnEmp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,29 +308,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(923, 552);
             this.panel1.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.panel3.Controls.Add(this.tbExit);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(206, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(964, 32);
-            this.panel3.TabIndex = 3;
-            // 
-            // tbExit
-            // 
-            this.tbExit.AutoSize = true;
-            this.tbExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tbExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbExit.Location = new System.Drawing.Point(934, 3);
-            this.tbExit.Name = "tbExit";
-            this.tbExit.Size = new System.Drawing.Size(26, 25);
-            this.tbExit.TabIndex = 0;
-            this.tbExit.Text = "X";
-            this.tbExit.Click += new System.EventHandler(this.tbExit_Click);
             // 
             // employee2
             // 
@@ -331,6 +352,29 @@
             this.bill1.Size = new System.Drawing.Size(923, 560);
             this.bill1.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.panel3.Controls.Add(this.tbExit);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(206, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(964, 32);
+            this.panel3.TabIndex = 3;
+            // 
+            // tbExit
+            // 
+            this.tbExit.AutoSize = true;
+            this.tbExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tbExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbExit.Location = new System.Drawing.Point(934, 3);
+            this.tbExit.Name = "tbExit";
+            this.tbExit.Size = new System.Drawing.Size(26, 25);
+            this.tbExit.TabIndex = 0;
+            this.tbExit.Text = "X";
+            this.tbExit.Click += new System.EventHandler(this.tbExit_Click);
+            // 
             // employee1
             // 
             this.employee1.Location = new System.Drawing.Point(0, 0);
@@ -344,59 +388,6 @@
             this.customer1.Name = "customer1";
             this.customer1.Size = new System.Drawing.Size(923, 590);
             this.customer1.TabIndex = 0;
-            // 
-            // btnSale
-            // 
-            this.btnSale.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSale.BorderRadius = 0;
-            this.btnSale.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnSale.ButtonText = "Sales";
-            this.btnSale.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSale.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSale.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSale.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSale.Iconimage")));
-            this.btnSale.Iconimage_right = null;
-            this.btnSale.Iconimage_right_Selected = null;
-            this.btnSale.Iconimage_Selected = null;
-            this.btnSale.IconMarginLeft = 0;
-            this.btnSale.IconMarginRight = 0;
-            this.btnSale.IconRightVisible = true;
-            this.btnSale.IconRightZoom = 0D;
-            this.btnSale.IconVisible = true;
-            this.btnSale.IconZoom = 60D;
-            this.btnSale.IsTab = false;
-            this.btnSale.Location = new System.Drawing.Point(-3, 460);
-            this.btnSale.Name = "btnSale";
-            this.btnSale.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSale.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnSale.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnSale.selected = false;
-            this.btnSale.Size = new System.Drawing.Size(206, 48);
-            this.btnSale.TabIndex = 6;
-            this.btnSale.Text = "Sales";
-            this.btnSale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSale.Textcolor = System.Drawing.Color.White;
-            this.btnSale.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 72);
-            this.label2.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(58, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 25);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Real Estate";
             // 
             // FormRS
             // 
@@ -438,7 +429,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label tbExit;
         private Bunifu.Framework.UI.BunifuFlatButton btnSale;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }
 }
