@@ -1,6 +1,6 @@
 ﻿namespace real_estate
 {
-    partial class Form1
+    partial class FormRS
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRS));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnProject = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnBill = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -46,6 +46,9 @@
             this.bill1 = new real_estate.user_control.Bill();
             this.employee1 = new real_estate.user_control.Employee();
             this.customer1 = new real_estate.user_control.Customer();
+            this.btnSale = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -54,6 +57,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnSale);
             this.panel2.Controls.Add(this.btnProject);
             this.panel2.Controls.Add(this.btnBill);
             this.panel2.Controls.Add(this.btnProduct);
@@ -339,7 +345,60 @@
             this.customer1.Size = new System.Drawing.Size(923, 590);
             this.customer1.TabIndex = 0;
             // 
-            // Form1
+            // btnSale
+            // 
+            this.btnSale.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSale.BorderRadius = 0;
+            this.btnSale.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnSale.ButtonText = "Sales";
+            this.btnSale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSale.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSale.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSale.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSale.Iconimage")));
+            this.btnSale.Iconimage_right = null;
+            this.btnSale.Iconimage_right_Selected = null;
+            this.btnSale.Iconimage_Selected = null;
+            this.btnSale.IconMarginLeft = 0;
+            this.btnSale.IconMarginRight = 0;
+            this.btnSale.IconRightVisible = true;
+            this.btnSale.IconRightZoom = 0D;
+            this.btnSale.IconVisible = true;
+            this.btnSale.IconZoom = 60D;
+            this.btnSale.IsTab = false;
+            this.btnSale.Location = new System.Drawing.Point(-3, 460);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSale.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnSale.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSale.selected = false;
+            this.btnSale.Size = new System.Drawing.Size(206, 48);
+            this.btnSale.TabIndex = 6;
+            this.btnSale.Text = "Sales";
+            this.btnSale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSale.Textcolor = System.Drawing.Color.White;
+            this.btnSale.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 72);
+            this.label2.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(58, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 25);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Real Estate";
+            // 
+            // FormRS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -348,10 +407,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FormRS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí bất động sản";
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -377,6 +437,9 @@
         private user_control.Customer customer3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label tbExit;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSale;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace real_estate
 {
-    public partial class Form1 : Form
+    public partial class FormRS : Form
     {
-        public Form1()
+        public FormRS()
         {
             InitializeComponent();
         }
