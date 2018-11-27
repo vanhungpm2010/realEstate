@@ -28,10 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvEmployee = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(213, 198);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(460, 108);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Customer";
+            // 
+            // dgvEmployee
+            // 
+            this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployee.Location = new System.Drawing.Point(310, 56);
+            this.dgvEmployee.Name = "dgvEmployee";
+            this.dgvEmployee.Size = new System.Drawing.Size(240, 150);
+            this.dgvEmployee.TabIndex = 1;
+            // 
+            // Customer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvEmployee);
+            this.Controls.Add(this.label1);
+            this.Name = "Customer";
+            this.Size = new System.Drawing.Size(923, 590);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvEmployee;
     }
 }

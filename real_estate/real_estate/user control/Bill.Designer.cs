@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(349, 208);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(172, 108);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Bill";
+            // 
+            // Bill
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Name = "Bill";
+            this.Size = new System.Drawing.Size(923, 590);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label2;
     }
 }

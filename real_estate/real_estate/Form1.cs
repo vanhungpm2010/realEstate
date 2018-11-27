@@ -1,4 +1,5 @@
-﻿using System;
+﻿using real_estate.user_control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,15 +18,40 @@ namespace real_estate
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        void LoadGiaoDien()
         {
-            // đây là đâu
-            // abc
-            /// nguyễn văn hùng
-            // đặng ngọc tuấn
-            //Test
+            
         }
 
-      
+        private void btnEmp_Click(object sender, EventArgs e)
+        {
+            employee2.BringToFront();
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            customer3.BringToFront();
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            products1.BringToFront();
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            bill1.BringToFront();
+        }
+
+        private void btnProject_Click(object sender, EventArgs e)
+        {
+            projects1.BringToFront();
+        }
+
+        private void tbExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

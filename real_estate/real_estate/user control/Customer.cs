@@ -16,5 +16,6 @@ namespace real_estate.user_control
         {
             InitializeComponent();
         }
+
     }
 }

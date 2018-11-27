@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLBDS" Class="QLBDSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-UV3T1K4\SQLEXPRESS;Initial Catalog=QLBDS;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QLBDSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BDS" Member="BDs">
+    <Type Name="BD">
+      <Column Name="ID_BDS" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDLBDS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MADA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TEN_BDS" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TUOITHO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QUYHOACH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="THOIGIANSUDUNG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KICHTHUOC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VITRI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="BD_SAN_PHAM" Member="SAN_PHAMs" ThisKey="ID_BDS" OtherKey="ID_BDS" Type="SAN_PHAM" />
+      <Association Name="DU_AN_BD" Member="DU_AN" ThisKey="MADA" OtherKey="MADA" Type="DU_AN" IsForeignKey="true" />
+      <Association Name="LOAI_BD_BD" Member="LOAI_BD" ThisKey="IDLBDS" OtherKey="IDLBDS" Type="LOAI_BD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SAN_PHAM" Member="SAN_PHAMs">
+    <Type Name="SAN_PHAM">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDMR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_BDS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENSP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GIA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SOPHONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOLAU" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DIENTICH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PHAPLI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HUONG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="SAN_PHAM_COCHITIET" Member="COCHITIETs" ThisKey="ID" OtherKey="ID" Type="COCHITIET" />
+      <Association Name="SAN_PHAM_QUANLYSP" Member="QUANLYSPs" ThisKey="ID" OtherKey="ID" Type="QUANLYSP" />
+      <Association Name="BD_SAN_PHAM" Member="BD" ThisKey="ID_BDS" OtherKey="ID_BDS" Type="BD" IsForeignKey="true" />
+      <Association Name="MARKETING_SAN_PHAM" Member="MARKETING" ThisKey="IDMR" OtherKey="IDMR" Type="MARKETING" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHI_NHANH" Member="CHI_NHANHs">
+    <Type Name="CHI_NHANH">
+      <Column Name="MACN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENCN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="CHI_NHANH_NHAN_VIEN" Member="NHAN_VIENs" ThisKey="MACN" OtherKey="MACN" Type="NHAN_VIEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COCHITIET" Member="COCHITIETs">
+    <Type Name="COCHITIET">
+      <Column Name="MAHD" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="SAN_PHAM_COCHITIET" Member="SAN_PHAM" ThisKey="ID" OtherKey="ID" Type="SAN_PHAM" IsForeignKey="true" />
+      <Association Name="HOA_DON_COCHITIET" Member="HOA_DON" ThisKey="MAHD" OtherKey="MAHD" Type="HOA_DON" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DU_AN" Member="DU_ANs">
+    <Type Name="DU_AN">
+      <Column Name="MADA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MALOAIDA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENDA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NGAYDANG" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOICAPGIAYPHEP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NGAYCAPGIAY" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SOGIAYPHEP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DIENTICH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DU_AN_BD" Member="BDs" ThisKey="MADA" OtherKey="MADA" Type="BD" />
+      <Association Name="DU_AN_QUANLIDA" Member="QUANLIDAs" ThisKey="MADA" OtherKey="MADA" Type="QUANLIDA" />
+      <Association Name="LOAI_DU_AN_DU_AN" Member="LOAI_DU_AN" ThisKey="MALOAIDA" OtherKey="MALOAIDA" Type="LOAI_DU_AN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOA_DON" Member="HOA_DONs">
+    <Type Name="HOA_DON">
+      <Column Name="MAHD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MANV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MAKH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MA_SP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NGXUAT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="HOA_DON_COCHITIET" Member="COCHITIETs" ThisKey="MAHD" OtherKey="MAHD" Type="COCHITIET" />
+      <Association Name="KHACHHANG_HOA_DON" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
+      <Association Name="NHAN_VIEN_HOA_DON" Member="NHAN_VIEN" ThisKey="MANV" OtherKey="MANV" Type="NHAN_VIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
+    <Type Name="KHACHHANG">
+      <Column Name="MAKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="HOKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TENKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NGSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LOAIKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MATHUETNCN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="KHACHHANG_HOA_DON" Member="HOA_DONs" ThisKey="MAKH" OtherKey="MAKH" Type="HOA_DON" />
+      <Association Name="KHACHHANG_PHUC_VU" Member="PHUC_VUs" ThisKey="MAKH" OtherKey="MAKH" Type="PHUC_VU" />
+      <Association Name="KHACHHANG_QUANGBA" Member="QUANGBAs" ThisKey="MAKH" OtherKey="MAKH" Type="QUANGBA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHUYEN_MAI" Member="KHUYEN_MAIs">
+    <Type Name="KHUYEN_MAI">
+      <Column Name="IDKM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDMR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENKM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CHIPHI" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="MARKETING_KHUYEN_MAI" Member="MARKETING" ThisKey="IDMR" OtherKey="IDMR" Type="MARKETING" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAI_BDS" Member="LOAI_BDs">
+    <Type Name="LOAI_BD">
+      <Column Name="IDLBDS" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENLOAIBDS" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="LOAI_BD_BD" Member="BDs" ThisKey="IDLBDS" OtherKey="IDLBDS" Type="BD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAI_DU_AN" Member="LOAI_DU_ANs">
+    <Type Name="LOAI_DU_AN">
+      <Column Name="MALOAIDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENLOAIDA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="LOAI_DU_AN_DU_AN" Member="DU_ANs" ThisKey="MALOAIDA" OtherKey="MALOAIDA" Type="DU_AN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARKETING" Member="MARKETINGs">
+    <Type Name="MARKETING">
+      <Column Name="IDMR" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="THOIGIAN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TONGCHIPHI" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="MARKETING_SAN_PHAM" Member="SAN_PHAMs" ThisKey="IDMR" OtherKey="IDMR" Type="SAN_PHAM" />
+      <Association Name="MARKETING_KHUYEN_MAI" Member="KHUYEN_MAIs" ThisKey="IDMR" OtherKey="IDMR" Type="KHUYEN_MAI" />
+      <Association Name="MARKETING_NHAN_VIEN" Member="NHAN_VIENs" ThisKey="IDMR" OtherKey="IDMR" Type="NHAN_VIEN" />
+      <Association Name="MARKETING_QUANG_CAO" Member="QUANG_CAOs" ThisKey="IDMR" OtherKey="IDMR" Type="QUANG_CAO" />
+      <Association Name="MARKETING_QUANGBA" Member="QUANGBAs" ThisKey="IDMR" OtherKey="IDMR" Type="QUANGBA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHAN_VIEN" Member="NHAN_VIENs">
+    <Type Name="NHAN_VIEN">
+      <Column Name="MANV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MACN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDMR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HONV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TENNV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NGSINH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PHAI" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="DCHI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HOAHONG" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="LUONG" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="NHAN_VIEN_HOA_DON" Member="HOA_DONs" ThisKey="MANV" OtherKey="MANV" Type="HOA_DON" />
+      <Association Name="NHAN_VIEN_PHUC_VU" Member="PHUC_VUs" ThisKey="MANV" OtherKey="MANV" Type="PHUC_VU" />
+      <Association Name="NHAN_VIEN_QUANLIDA" Member="QUANLIDAs" ThisKey="MANV" OtherKey="MANV" Type="QUANLIDA" />
+      <Association Name="NHAN_VIEN_QUANLIQUY" Member="QUANLIQUYs" ThisKey="MANV" OtherKey="MANV" Type="QUANLIQUY" />
+      <Association Name="NHAN_VIEN_QUANLYSP" Member="QUANLYSPs" ThisKey="MANV" OtherKey="MANV" Type="QUANLYSP" />
+      <Association Name="CHI_NHANH_NHAN_VIEN" Member="CHI_NHANH" ThisKey="MACN" OtherKey="MACN" Type="CHI_NHANH" IsForeignKey="true" />
+      <Association Name="MARKETING_NHAN_VIEN" Member="MARKETING" ThisKey="IDMR" OtherKey="IDMR" Type="MARKETING" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHUC_VU" Member="PHUC_VUs">
+    <Type Name="PHUC_VU">
+      <Column Name="MANV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAKH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="THOI_GIAN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="NHAN_VIEN_PHUC_VU" Member="NHAN_VIEN" ThisKey="MANV" OtherKey="MANV" Type="NHAN_VIEN" IsForeignKey="true" />
+      <Association Name="KHACHHANG_PHUC_VU" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUANG_CAO" Member="QUANG_CAOs">
+    <Type Name="QUANG_CAO">
+      <Column Name="IDQC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDMR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENQC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CHIPHI" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="MARKETING_QUANG_CAO" Member="MARKETING" ThisKey="IDMR" OtherKey="IDMR" Type="MARKETING" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUANGBA" Member="QUANGBAs">
+    <Type Name="QUANGBA">
+      <Column Name="MAKH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDMR" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="KHACHHANG_QUANGBA" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
+      <Association Name="MARKETING_QUANGBA" Member="MARKETING" ThisKey="IDMR" OtherKey="IDMR" Type="MARKETING" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUANLIDA" Member="QUANLIDAs">
+    <Type Name="QUANLIDA">
+      <Column Name="MANV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MADA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="NHAN_VIEN_QUANLIDA" Member="NHAN_VIEN" ThisKey="MANV" OtherKey="MANV" Type="NHAN_VIEN" IsForeignKey="true" />
+      <Association Name="DU_AN_QUANLIDA" Member="DU_AN" ThisKey="MADA" OtherKey="MADA" Type="DU_AN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUANLIQUY" Member="QUANLIQUYs">
+    <Type Name="QUANLIQUY">
+      <Column Name="MAQUY" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MANV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="NHAN_VIEN_QUANLIQUY" Member="NHAN_VIEN" ThisKey="MANV" OtherKey="MANV" Type="NHAN_VIEN" IsForeignKey="true" />
+      <Association Name="QUY_QUANLIQUY" Member="QUY" ThisKey="MAQUY" OtherKey="MAQUY" Type="QUY" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUANLYSP" Member="QUANLYSPs">
+    <Type Name="QUANLYSP">
+      <Column Name="MANV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="NHAN_VIEN_QUANLYSP" Member="NHAN_VIEN" ThisKey="MANV" OtherKey="MANV" Type="NHAN_VIEN" IsForeignKey="true" />
+      <Association Name="SAN_PHAM_QUANLYSP" Member="SAN_PHAM" ThisKey="ID" OtherKey="ID" Type="SAN_PHAM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUY" Member="QUYs">
+    <Type Name="QUY">
+      <Column Name="MAQUY" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENQUY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SOTIEN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="QUY_QUANLIQUY" Member="QUANLIQUYs" ThisKey="MAQUY" OtherKey="MAQUY" Type="QUANLIQUY" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDeleteCustomer" Method="spDeleteCustomer">
+    <Parameter Name="makh" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spGetAllEmployee" Method="spGetAllEmployee">
+    <ElementType Name="spGetAllEmployeeResult">
+      <Column Name="MANV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MACN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDMR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HONV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TENNV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NGSINH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PHAI" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="DCHI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HOAHONG" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="LUONG" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDeleteEmployee" Method="spDeleteEmployee">
+    <Parameter Name="manv" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spGetAllCustomer" Method="spGetAllCustomer">
+    <ElementType Name="spGetAllCustomerResult">
+      <Column Name="MAKH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="HOKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TENKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NGSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LOAIKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MATHUETNCN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
